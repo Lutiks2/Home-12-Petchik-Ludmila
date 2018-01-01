@@ -1,0 +1,18 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.pull-left {
+    float: left;
+    width: (770px*100%)/1170px;
+    padding-top: 100px;
+}
+
+.pull-right {
+    float: right;
+    width: (370px*100%)/1170px;
+    padding-top: 100px;
+}

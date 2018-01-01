@@ -1,0 +1,49 @@
+.button {
+    padding: 21px 44px 20px;
+    border-radius: 50px;
+    font: 700 12px 'Droid Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.white-button {
+    background: $second-color;
+    color: $main-color;
+}
+
+.red-button {
+    background: $main-color;
+    color: $second-color;
+}
+
+.white-button, .red-button {
+    &:hover {
+        @include button-hover-backgr;
+        @include button-hover-font;
+        @include transition-effect;
+    }
+}
+/*---------slider-navigation-------*/
+.arrow {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 0;
+    list-style: none;
+    text-align: right;
+    li {
+        display: inline-flex;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        background: $main-color;
+        color: #fff;
+        &:hover {
+            @include button-hover-backgr;
+            @include transition-effect;
+        }
+        .fa-angle-right, .fa-angle-left {
+            margin: 0 auto;
+            font-size: 24px;
+        }
+
+    }
+}

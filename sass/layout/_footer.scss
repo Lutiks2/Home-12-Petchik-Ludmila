@@ -1,0 +1,22 @@
+.footer {
+    padding: 69px 0 90px;
+    border-top: 1px solid #dfdfdf;
+    text-align: center;
+    .main-nav {
+        display: block;
+        li:before {
+            background: $main-color;
+        }
+        a {
+            color: #333333;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    p {
+        font: 13px 'Droid Sans', sans-serif;
+        color: $heading-color;
+        letter-spacing: 0.65px;
+    }
+}

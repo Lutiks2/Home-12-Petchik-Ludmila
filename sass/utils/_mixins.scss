@@ -1,0 +1,15 @@
+@mixin transition-effect {
+    transition: all 0.5s ease;
+}
+
+@mixin hover-effect {
+    color: $hover-color;
+}
+
+@mixin button-hover-backgr {
+    background: $hover-color;
+}
+
+@mixin button-hover-font {
+    color: $second-color;
+}

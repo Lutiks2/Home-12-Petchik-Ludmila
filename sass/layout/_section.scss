@@ -1,0 +1,365 @@
+
+/*-----------welcome-----------*/
+
+.welcome-banner {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 3px solid #d3d3d3;
+    &:after {
+        content: '';
+        display: block;
+        width: 80%;
+        background: $main-color;
+        height: 3px;
+        position: absolute;
+        margin-top: 100px;
+    }
+}
+
+.first-banner {
+    background: url('../images/welcome.png') center/cover;
+}
+
+.second-banner {
+    background: url('../images/welcome2.png') center/cover;
+}
+
+.third-banner {
+    background: url('../images/welcome3.png') center/cover;
+}
+.welcome-heading {
+    padding: 80px 0 74px;
+    h1 {
+        margin-top: 0;
+        font: 700 116px/1 'Oswald', sans-serif;
+        text-transform: uppercase;
+        color: $main-color;
+    }
+}
+
+.welcome-heading-bottom {
+    display: block;
+}
+
+.welcome-heading-bottom {
+    font: 80px 'Great Vibes', cursive;
+    text-transform: capitalize;
+    color: $heading-color;
+}
+
+/*---------------introdusing-------------*/
+
+.introducing {
+    padding-top: 100px;
+    .heading {
+        padding-bottom: 0;
+    }
+}
+
+.introducing-list {
+    //display: flex;
+    //justify-content: space-between;
+    padding: 0;
+    list-style: none;
+    li {
+        position: relative;
+        margin: 0 15px;
+        img {
+            max-height: 503px;
+        }
+    }
+}
+
+.intro-list {
+    width: 100%;
+    position: absolute;
+    padding-bottom: 24px;
+    background: $main-color;
+    bottom: 0;
+    color: $second-color;
+    h4 {
+        padding-left: 27px;
+        margin: 17px 0 0;
+        font: 22px 'Oswald', sans-serif;
+    }
+    span {
+        padding-left: 27px;
+        padding-bottom: 24px;
+        font: 16px 'Droid Sans', sans-serif;
+    }
+}
+
+.social-list.social-hide {
+    display: none;
+    padding-left: 27px;
+    li {
+        padding-top: 23px;
+        padding-right: 15px;
+    }
+}
+
+.intro-list:hover .social-list {
+    display: block;
+}
+
+.line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 100px auto 0;
+    background: #dfdfdf;
+}
+
+/*--------------upcoming----------*/
+
+.upcoming, .latest {
+    padding-bottom: 100px;
+}
+
+.concert-date {
+    float: left;
+    height: auto;
+    margin-right: 80px;
+    position: relative;
+    img {
+        max-width: 270px;
+    }
+    .hover-date {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        .wrap-span {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            span {
+                display: block;
+                font: 500 32px 'Oswald', sans-serif;
+                color: $second-color;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.location {
+    h5 {
+        margin: 0;
+        padding: 23px 0 33px;
+        font: 500 22px 'Oswald', sans-serif;
+        line-height: 1;
+    }
+    dl {
+        margin: 0;
+        padding-bottom: 30px;
+        dt {
+            float: left;
+            span{
+                padding: 0 15px 0 35px;
+            }
+        }
+        dt:first-child {
+            span {
+                padding: 0 12px 0 10px;
+            }
+        }
+        dd {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.concert {
+    padding-bottom: 5px;
+    border-bottom: 4px solid #dfdfdf;
+}
+
+/*----------latest-------------*/
+
+.latest .heading {
+    padding-bottom: 0;
+}
+
+/*------------founder------------*/
+
+.founder {
+    background: url('../images/founder.png') center/cover;
+    .founder-main {
+        max-width: 556px;
+        padding: 85px 0 80px 80px;
+        color: $second-color;
+        h2 {
+            margin-bottom: 0;
+            font: 500 32px 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 0 0 45px;
+            font: 22px 'Droid Sans', sans-serif;
+        }
+    }
+}
+
+.founder-main .cantus {
+    font-size: 65px;
+    line-height: 0.7;
+    color: $second-color;
+}
+
+.pop-up-show {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(118, 100, 101, 0.6);
+}
+
+.pop-up {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 600px;
+    height: 300px;
+    padding: 40px;
+    border: 7px $main-color double;
+    background: $second-color;
+    color: #000;
+    h4 {
+        font: 500 25px 'Oswald', sans-serif;
+    }
+}
+
+.show {
+    display: block;
+}
+/*----------Songs---------------*/
+
+.song {
+    list-style: none;
+    columns: 3;
+    margin-top: 42px;
+    padding-left: 0;
+    li {
+        width: 199px;
+        padding: 7px 0 12px;
+        border-bottom: 1px solid #999999;
+        a {
+            font: 16px 'Droid Sans', sans-serif;
+            color: #333333;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+/*----------instagram--------------*/
+
+.instagram {
+    padding-bottom: 90px;
+}
+
+.instagram-list {
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        &:nth-child(odd) {
+            padding-right: 29px;
+        }
+        &:nth-child(2) {
+            padding-bottom: 29px;
+        }
+    }
+    img {
+        max-width: 170px;
+    }
+}
+
+/*----------download---------------*/
+.download {
+    background: url('../images/download.png') center/cover;
+    .download-main {
+        padding: 80px 0 100px;
+        text-align: center;
+        color: $second-color;
+        h2 {
+            margin: 0;
+            font: 500 32px 'Oswald', sans-serif;
+            text-transform: capitalize;
+        }
+        p {
+            margin: 9px 0 40px;
+            font: 22px 'Droid Sans', sans-serif;
+        }
+    }
+}
+
+.download-list {
+    padding-left: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        &:first-child {
+            margin-right: 10px;
+        }
+        img {
+            max-width: 162px;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+/*----------form--------------*/
+.subscribe {
+    padding: 100px 0 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

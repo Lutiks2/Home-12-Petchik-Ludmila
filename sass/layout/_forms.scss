@@ -1,0 +1,44 @@
+.form {
+    width: 530px;
+    margin: 0 auto;
+    padding-bottom: 19px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid #999999;
+    input {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearence: none;
+    }
+}
+
+.email {
+    border: none;
+    font: 16px 'Droid Sans', sans-serif;
+    text-transform: lowercase;
+}
+
+.email::-moz-placeholder {
+    color: #282828;
+}
+
+.email::-webkit-input-placeholder{
+    color: #282828;
+}
+
+.email::placeholder {
+    color: #282828;
+}
+
+.sendsubmit {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: url('../images/arrow.png') no-repeat center top;
+    text-indent: -1000em;
+    &:hover {
+        cursor: pointer;
+    }
+}
