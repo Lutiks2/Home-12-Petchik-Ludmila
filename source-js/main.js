@@ -11,14 +11,14 @@ jQuery(window).load(function () {
 jQuery('.slider').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  arrows: false,
+  arrows: false
 })
 
-jQuery('.ar-left').on('click', function () {
+jQuery('#ar-left').on('click', function () {
   $('.slider').slick('slickNext')
 })
 
-jQuery('.ar-right').on('click', function () {
+jQuery('#ar-right').on('click', function () {
   $('.slider').slick('slickPrev')
 })
 

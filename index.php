@@ -80,12 +80,15 @@ $data = require 'data.php';
             </h2>
         </div>
         <ul class="arrow">
-            <li class="ar-left">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
-            </li>
-            <li class="ar-right">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-            </li>
+            <?php
+            foreach ($data['introdusing']['arrows'] as $arrowItem) {
+                ?>
+                <li class="<?php echo $arrowItem['class']; ?>" id="<?php echo $arrowItem['id']; ?>">
+                    <i class="<?php echo $arrowItem['icon']; ?>" aria-hidden="true"></i>
+                </li>
+                <?php
+            }
+            ?>
         </ul>
         <div class="your-class">
             <ul class="introducing-list slider">
@@ -142,7 +145,7 @@ $data = require 'data.php';
                         ?>
                         <dt><?php echo $listItem['dt']; ?><span><?php echo $listItem['span']; ?></span></dt>
                         <dd><?php echo $listItem['dd']; ?></dd>
-                    <?php
+                        <?php
                     }
                     ?>
                 </dl>
@@ -159,12 +162,15 @@ $data = require 'data.php';
             </h2>
         </div>
         <ul class="arrow">
-            <li class="ar-left" id="video-left">
-                <i class="fa fa-angle-left flex-prev" aria-hidden="true"></i>
-            </li>
-            <li class="ar-right flex-next" id="video-right">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-            </li>
+            <?php
+            foreach ($data['latest']['arrows'] as $arrowItem) {
+                ?>
+                <li class="<?php echo $arrowItem['class']; ?>" id="<?php echo $arrowItem['id']; ?>">
+                    <i class="<?php echo $arrowItem['icon']; ?>" aria-hidden="true"></i>
+                </li>
+            <?php
+            }
+            ?>
         </ul>
         <div>
             <ul class="videoslider">
@@ -185,18 +191,25 @@ $data = require 'data.php';
 </div>
 <section class="founder container">
     <div class="founder-main">
-        <h2>Our Founder staying in our hearts</h2>
-        <p>1982 <a href="#" class="cantus">cantus</a> Start jurny and now it‘s top class Rock Band in the California.
+        <h2><?php echo $data['founder']['heading']; ?></h2>
+        <p><?php echo $data['founder']['paragraphBefore']; ?>
+            <a href="<?php echo $data['founder']['url']; ?>" class="<?php echo $data['founder']['link']; ?>">
+                <?php echo $data['founder']['title']; ?>
+            </a>
+            <?php echo $data['founder']['paragraphAfter']; ?>
         </p>
-        <a href="#" class="button white-button pop-up-open">learn more</a>
+        <a href="<?php echo $data['founder']['url']; ?>"
+           class="<?php echo $data['founder']['classButton']; ?><?php echo $data['founder']['classIntermediate']; ?>
+                  <?php echo $data['founder']['openButton']; ?>">
+            <?php echo $data['founder']['titleButton']; ?></a>
         <div class="pop-up-show">
             <div class="pop-up">
-                <h4>Founder reed more</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at beatae earum nam repellat, tempore
-                    temporibus. Cumque deserunt id natus saepe vero! Aspernatur pariatur, voluptatem! Aliquid cum
-                    debitis
-                    quas recusandae.</p>
-                <a href="#" class="button red-button pop-up-close">Close me</a>
+                <h4><?php echo $data['founder']['popUpHeading']; ?></h4>
+                <p><?php echo $data['founder']['text']; ?></p>
+                <a href="<?php echo $data['founder']['url']; ?>"
+                   class="<?php echo $data['founder']['classButton']; ?><?php echo $data['founder']['closeClassIntermediate']; ?>
+                  <?php echo $data['founder']['closeButton']; ?>">
+                    <?php echo $data['founder']['closeTitleButton']; ?></a>
             </div>
         </div>
     </div>
@@ -204,74 +217,63 @@ $data = require 'data.php';
 <div class="container clearfix">
     <section class="popular pull-left">
         <div class="heading">
-            <h2>Popular
-                <span>Songs</span>
+            <h2><?php echo $data['popular']['heading']; ?>
+                <span><?php echo $data['popular']['subheading']; ?></span>
             </h2>
         </div>
         <div class="cloud">
             <iframe width="100%" height="155" scrolling="no" frameborder="no"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/206823343&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=false"></iframe>
+                    src="<?php echo $data['popular']['link']; ?>&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=false"></iframe>
         </div>
         <ul class="song">
-            <li><a href="#">01.My heart is dancing</a></li>
-            <li><a href="#">02.Good day</a></li>
-            <li><a href="#">03.Life for rent</a></li>
-            <li><a href="#">04.Hello It's me</a></li>
-            <li><a href="#">05.My heart is dancing</a></li>
-            <li><a href="#">06.Good day</a></li>
-            <li><a href="#">07.Life for rent</a></li>
-            <li><a href="#">08.Hello It's me</a></li>
-            <li><a href="#">09.My heart is dancing</a></li>
-            <li><a href="#">10.Good day</a></li>
-            <li><a href="#">11.Life for rent</a></li>
-            <li><a href="#">12.Hello It's me</a></li>
+            <?php
+            foreach ($data['popular']['song'] as $songItem) {
+                ?>
+                <li>
+                    <a href="<?php echo $songItem['url']; ?>"><?php echo $songItem['name']; ?></a>
+                </li>
+                <?php
+            }
+            ?>
         </ul>
     </section>
     <section class="instagram pull-right">
         <div class="heading">
-            <h2>Instagram
-                <span>Feed</span>
+            <h2><?php echo $data['instagram']['heading']; ?>
+                <span><?php echo $data['instagram']['subheading']; ?></span>
             </h2>
         </div>
         <ul class="instagram-list">
-            <li>
-                <a href="#">
-                    <img src="images/insta1.png" alt="insta1">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/insta2.png" alt="insta2">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/insta3.png" alt="insta3">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/insta4.png" alt="insta4">
-                </a>
-            </li>
+            <?php
+            foreach ($data['instagram']['list'] as $listItem) {
+                ?>
+                <li>
+                    <a href="<?php echo $listItem['url']; ?>">
+                        <img src="<?php echo $listItem['src']; ?>" alt="<?php echo $listItem['alt']; ?>">
+                    </a>
+                </li>
+                <?php
+            }
+            ?>
         </ul>
     </section>
 </div>
 <section class="download container">
     <div class="download-main">
-        <h2>Download our official apps</h2>
-        <p>Never stop listening. Take your playlists and likes wherever you go.</p>
+        <h2><?php echo $data['download']['heading']; ?></h2>
+        <p><?php echo $data['download']['text']; ?></p>
         <ul class="download-list">
-            <li>
-                <a href="#">
-                    <img src="images/apple.png" alt="App Store">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/google.png" alt="Google Play">
-                </a>
-            </li>
+            <?php
+            foreach ($data['download']['list'] as $listItem) {
+                ?>
+                <li>
+                    <a href="<?php echo $listItem['url']; ?>">
+                        <img src="<?php echo $listItem['src']; ?>" alt="<?php echo $listItem['alt']; ?>">
+                    </a>
+                </li>
+                <?php
+            }
+            ?>
         </ul>
     </div>
 </section>
@@ -285,16 +287,23 @@ $data = require 'data.php';
     <div class="container">
         <nav class="footer-nav">
             <ul class="main-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Albums</a></li>
-                <li><a href="#">Pages</a></li>
+                <?php
+                foreach ($data['footer']['list'] as $listItem) {
+                    ?>
+                    <li>
+                        <a href="<?php echo $listItem['url']; ?>"><?php echo $listItem['title']; ?></a>
+                    </li>
+                    <?php
+                }
+                ?>
             </ul>
         </nav>
-        <p>Copyright © 2009–2016 <a href="#" class="cantus">cantus</a> © their respective owners. Shipped from Salem,
-            Mass. USA.</p>
+        <p><?php echo $data['footer']['textBefore']; ?>
+            <a href="<?php echo $data['footer']['url']; ?>" class="<?php echo $data['footer']['class']; ?>">
+                <?php echo $data['footer']['title']; ?>
+            </a>
+            <?php echo $data['footer']['textAfter']; ?>
+        </p>
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

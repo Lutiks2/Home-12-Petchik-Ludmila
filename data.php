@@ -93,6 +93,18 @@ return [
     'introdusing' => [
         'heading' => 'Introdusing',
         'subheading' => 'Our members',
+        'arrows' => [
+            [
+                'class' => 'ar-left',
+                'id' => 'ar-left',
+                'icon' => 'fa fa-angle-left',
+            ],
+            [
+                'class' => 'ar-right',
+                'id' => 'ar-right',
+                'icon' => 'fa fa-angle-right',
+            ],
+        ],
         'introducing-slider' => [
             [
                 'src' => 'images/vocal.png',
@@ -228,6 +240,18 @@ return [
     'latest' => [
         'heading' => 'Latest',
         'subheading' => 'Videos',
+        'arrows' => [
+            [
+                'class' => 'ar-left',
+                'id' => 'video-left',
+                'icon' => 'fa fa-angle-left',
+            ],
+            [
+                'class' => 'ar-right',
+                'id' => 'video-right',
+                'icon' => 'fa fa-angle-right',
+            ],
+        ],
         'video' => [
             [
                 'src' => 'https://www.youtube-nocookie.com/embed/tAGnKpE4NCI?rel=0',
@@ -243,15 +267,16 @@ return [
     //founder
     'founder' => [
         'heading' => 'Our Founder staying in our hearts',
-        'subheading' => 'Videos',
         'paragraphBefore' => '1982',
         'paragraphAfter' => 'Start jurny and now it‘s top class Rock Band in the California.',
+        'title' => 'cantus',
         'link' => 'cantus',
         'url' => '#',
         'titleButton' => 'learn more',
         'classButton' => 'button ',
         'classIntermediate' => 'white-button',
-        'colorButton' => ' red-button',
+        'closeClassIntermediate' => ' red-button',
+        'closeTitleButton' => 'Close me',
         'openButton' => ' pop-up-open',
         'closeButton' => 'pop-up-close',
         'popUpHeading' => 'Founder reed more',
@@ -259,5 +284,140 @@ return [
                     temporibus. Cumque deserunt id natus saepe vero! Aspernatur pariatur, voluptatem! Aliquid cum
                     debitis
                     quas recusandae.',
+    ],
+    //popular section
+    'popular' => [
+        'heading' => 'Popular',
+        'subheading' => 'Songs',
+        'link' => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/206823343',
+        'song' => [
+            [
+                'url' => '#',
+                'name' => '01.My heart is dancing',
+            ],
+            [
+                'url' => '#',
+                'name' => '02.Good day',
+            ],
+            [
+                'url' => '#',
+                'name' => '03.Life for rent',
+            ],
+            [
+                'url' => '#',
+                'name' => '04.Hello It\'s me',
+            ],
+            [
+                'url' => '#',
+                'name' => '01.My heart is dancing',
+            ],
+            [
+                'url' => '#',
+                'name' => '02.Good day',
+            ],
+            [
+                'url' => '#',
+                'name' => '03.Life for rent',
+            ],
+            [
+                'url' => '#',
+                'name' => '04.Hello It\'s me',
+            ],
+            [
+                'url' => '#',
+                'name' => '01.My heart is dancing',
+            ],
+            [
+                'url' => '#',
+                'name' => '02.Good day',
+            ],
+            [
+                'url' => '#',
+                'name' => '03.Life for rent',
+            ],
+            [
+                'url' => '#',
+                'name' => '04.Hello It\'s me',
+            ],
+        ],
+    ],
+    //instagram section
+    'instagram' => [
+        'heading' => 'Instagram',
+        'subheading' => 'Feed',
+        'list' => [
+            [
+                'url' => '#',
+                'src' => 'images/insta1.png',
+                'alt' => 'insta1',
+            ],
+            [
+                'url' => '#',
+                'src' => 'images/insta2.png',
+                'alt' => 'insta2',
+            ],
+            [
+                'url' => '#',
+                'src' => 'images/insta3.png',
+                'alt' => 'insta3',
+            ],
+            [
+                'url' => '#',
+                'src' => 'images/insta4.png',
+                'alt' => 'insta4',
+            ],
+        ],
+    ],
+//download section
+    'download' => [
+        'heading' => 'Download our official apps',
+        'text' => 'Never stop listening. Take your playlists and likes wherever you go.',
+        'list' => [
+            [
+                'url' => '#',
+                'src' => 'images/apple.png',
+                'alt' => 'insta3',
+            ],
+            [
+                'url' => '#',
+                'src' => 'images/google.png',
+                'alt' => 'insta4',
+            ],
+        ],
+    ],
+    //footer
+    'footer' => [
+        'textBefore' => 'Copyright © 2009–2016 ',
+        'textAfter' => ' © their respective owners. Shipped from Salem,
+            Mass. USA.',
+        'url' => '#',
+        'class' => 'cantus',
+        'title' => 'cantus',
+        'list' => [
+            [
+                'url' => '#',
+                'title' => 'Home',
+            ],
+            [
+                'title' => 'Events',
+                'url' => '#',
+            ],
+            [
+                'title' => 'gallery',
+                'url' => '#',
+            ],
+            [
+                'title' => 'news',
+                'url' => '#',
+            ],
+            [
+                'title' => 'albums',
+                'url' => '#',
+            ],
+            [
+                'title' => 'pages',
+                'url' => '#',
+            ],
+        ],
     ],
 ];
